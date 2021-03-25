@@ -1,0 +1,55 @@
+.titulo p{
+    text-align:center;
+    font-size: 50px;
+    font-family: 'Fredoka One', cursive;
+}
+.navbar-brand {
+    font-size: 16px;
+}
+.footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   background-color: midnightblue !important;
+   font-family: 'Fredoka One', cursive;
+   color: white !important;
+}
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+}
+.progress {
+    margin-top: 6%;
+    margin-bottom: 14%;
+}
+
+.img-thumbnail {
+    margin-top: 15%;
+}
+.navbar-dark .navbar-brand {
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+}
+.col-sm{
+    font-family: 'Fredoka One', cursive;
+}
+.text{
+    font-size: 20px;
+}
+.list-group {
+    margin-top: 5%;
+}
+.list-group-item.active {
+    z-index: 0;
+}
+.alert-primary {
+    margin-top: 6%;
+}
