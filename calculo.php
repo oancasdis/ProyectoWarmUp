@@ -2,7 +2,7 @@
 session_start();
 print_r($_POST);
 $dinero = $_POST["valor"]*$_POST["cantidad"]; 
-if($_POST["monto"] > 0 && $_POST["cantidad"] > 0 && $_POST["valor"] > 0 && $dinero > $_POST["monto"] ){
+if($_POST["monto"] > 0 && $_POST["cantidad"] > 0 && $_POST["valor"] > 0 && $dinero >= $_POST["monto"] ){
     $TIRH = (($dinero+$_POST['adicional'])*100)/$_POST["monto"]; 
     $TIRH = $TIRH - 100;
     //$TIRH = 0;
