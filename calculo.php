@@ -2,8 +2,47 @@
 session_start();
 print_r($_POST);
 $dinero = $_POST["valor"]*$_POST["cantidad"]; 
-if($_POST["monto"] > 0 && $_POST["cantidad"] > 0 && $_POST["valor"] > 0 && $dinero >= $_POST["monto"] ){
-    $TIRH = (($dinero+$_POST['adicional'])*100)/$_POST["monto"]; 
+if($_POST["monto"] > 0){
+    
+}
+else{
+    $_SESSION['flag1'] =true;
+    
+}
+if($dinero >= $_POST["monto"])
+            {
+   
+            }
+            else
+            {
+                $_SESSION['flag4'] =true;
+            }
+               
+if($_POST["valor"] > 0)
+        {
+            
+        }
+        else
+        {
+            $_SESSION['flag3'] =true;
+            
+        }
+        
+if($_POST["cantidad"] > 0)
+    {
+        
+    }
+    else
+    {
+        $_SESSION['flag2'] =true;
+       
+    }
+
+
+if( $_SESSION['flag1'] ==false && $_SESSION['flag2'] ==false &&$_SESSION['flag3'] ==false && $_SESSION['flag4'] ==false  ){
+
+
+$TIRH = (($dinero+$_POST['adicional'])*100)/$_POST["monto"]; 
     $TIRH = $TIRH - 100;
     //$TIRH = 0;
     ?><br><?php
@@ -94,7 +133,8 @@ if($_POST["monto"] > 0 && $_POST["cantidad"] > 0 && $_POST["valor"] > 0 && $dine
 
     header("Location: /");
 }
-else{
+else
+{
     header("Location: /");
 }
 ?>

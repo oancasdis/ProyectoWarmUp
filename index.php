@@ -6,6 +6,14 @@ if(!isset($_SESSION['TIR'])){
   $_SESSION['a'] = -1;
   $ARR;
 }
+if(!isset($_SESSION['flag1'])){
+ $_SESSION['flag1'] =false;
+ $_SESSION['flag2'] =false;
+ $_SESSION['flag3'] =false;
+ $_SESSION['flag4'] =false;
+}
+
+
 ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
@@ -53,7 +61,42 @@ if(!isset($_SESSION['TIR'])){
     <label for="validationServer01" class="form-label">Cobro adicional</label>
     <input type="number"  name="adicional" value="" required>
   </div>
+  <?php
+  if( $_SESSION['flag1'] ==true ||$_SESSION['flag2'] ==true ||$_SESSION['flag3'] ==true || $_SESSION['flag4'] ==true  )
+  {
+      
+  if( $_SESSION['flag1'] ==true )
+  {
+      ?> 
+      <span>Ingrese un monto mayor a 0.</span>
+      <?php
+      $_SESSION['flag1'] =false;
+  }
+  if( $_SESSION['flag2'] ==true )
+  {
+      ?> 
+      <span>Ingrese una cantidad de cuotas mayor a 0.</span>
+      <?php
+      $_SESSION['flag2'] =false;
+  }
+  if( $_SESSION['flag3'] ==true )
+  {
+      ?> 
+      <span>Ingrese un valor de la cuota mayor a 0.</span>
+      <?php
+      $_SESSION['flag3'] =false;
+  }
+  if( $_SESSION['flag4'] ==true )
+  {
+      ?> 
+      <span>El préstamo no puede ser menor a la cuota.</span>
+      <?php
+      $_SESSION['flag4'] =false;
+  }
+}
+  
 
+  ?>
   <span>*Si usted no posee cobros adicionales tan solo ponga 0.</span>
 
 <div class="col-12">
