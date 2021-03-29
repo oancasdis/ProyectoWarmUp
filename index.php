@@ -11,6 +11,7 @@ if(!isset($_SESSION['flag1'])){
  $_SESSION['flag2'] =false;
  $_SESSION['flag3'] =false;
  $_SESSION['flag4'] =false;
+ $_SESSION['flag5'] =false;
 }
 
 
@@ -62,7 +63,7 @@ if(!isset($_SESSION['flag1'])){
     <input type="number"  name="adicional" value="" required>
   </div>
   <?php
-  if( $_SESSION['flag1'] ==true ||$_SESSION['flag2'] ==true ||$_SESSION['flag3'] ==true || $_SESSION['flag4'] ==true  )
+  if( $_SESSION['flag1'] ==true ||$_SESSION['flag2'] ==true ||$_SESSION['flag3'] ==true || $_SESSION['flag4'] ==true || $_SESSION['flag5'] ==true  )
   {
       
   if( $_SESSION['flag1'] ==true )
@@ -93,9 +94,15 @@ if(!isset($_SESSION['flag1'])){
       <?php
       $_SESSION['flag4'] =false;
   }
+  if( $_SESSION['flag5'] ==true )
+  {
+      ?> 
+      <span>Ingrese un valor del cobro adicional mayor a 0.</span>
+      <?php
+      $_SESSION['flag5'] =false;
+  }
 }
   
-
   ?>
   <span>*Si usted no posee cobros adicionales tan solo ponga 0.</span>
 
