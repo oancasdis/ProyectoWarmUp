@@ -69,35 +69,45 @@ if(!isset($_SESSION['flag1'])){
   if( $_SESSION['flag1'] ==true )
   {
       ?> 
-      <span>Ingrese un monto mayor a 0.</span>
+      <div class="red">
+        <span>Ingrese un monto mayor a 0.</span>
+      </div>
       <?php
       $_SESSION['flag1'] =false;
   }
   if( $_SESSION['flag2'] ==true )
   {
       ?> 
-      <span>Ingrese una cantidad de cuotas mayor a 0.</span>
+      <div class="red">
+        <span>Ingrese una cantidad de cuotas mayor a 0.</span>
+      </div>
       <?php
       $_SESSION['flag2'] =false;
   }
   if( $_SESSION['flag3'] ==true )
   {
       ?> 
-      <span>Ingrese un valor de la cuota mayor a 0.</span>
+      <div class="red">
+        <span>Ingrese un valor de la cuota mayor a 0.</span>
+      </div>
       <?php
       $_SESSION['flag3'] =false;
   }
   if( $_SESSION['flag4'] ==true )
   {
       ?> 
-      <span>El préstamo no puede ser menor a la cuota.</span>
+      <div class="red">
+        <span>El préstamo no puede ser menor a la cuota.</span>
+      </div>
       <?php
       $_SESSION['flag4'] =false;
   }
   if( $_SESSION['flag5'] ==true )
   {
       ?> 
-      <span>Ingrese un valor del cobro adicional mayor a 0.</span>
+      <div class="red">
+        <span>Ingrese un valor del cobro adicional mayor a 0.</span>
+      </div>
       <?php
       $_SESSION['flag5'] =false;
   }
